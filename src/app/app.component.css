@@ -1,0 +1,19 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.formulario {
+  flex-basis: 35%;
+}
+
+.listado {
+  flex-basis: 65%;
+}
+
+@media (min-width: 780px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}

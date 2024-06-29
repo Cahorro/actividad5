@@ -1,0 +1,11 @@
+input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+}
+
+.formulario {
+  padding: 0px 30px;
+  background-color: lightblue;
+  border: 2px black solid;
+}
