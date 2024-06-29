@@ -1,1 +1,20 @@
-<p>formulario works!</p>
+<div class="formulario">
+    <div class="w_input">
+        <label for="title">Título</label>
+        <input type="text" placeholder="Introduce el título de la noticia">
+    </div>
+    <div class="w_input">
+        <label for="image">Imagen</label>
+        <input type="url" placeholder="Introduce la URL de la imagen">
+    </div>
+    <div class="cuerpo w_input">
+        <label for="text">Texto</label>
+        <textarea id="text" placeholder="Introduce el texto de la noticia"></textarea>
+    </div>
+    <div class="w_input">
+        <label for="date">Fecha de publicación</label>
+        <input type="date" id="fecha">
+    </div>
+    <button (click)="publicar()">Publicar noticia</button>
+
+</div>
