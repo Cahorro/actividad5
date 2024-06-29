@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { FormularioComponent } from './components/formulario/formulario.component';
 import { BlogComponent } from './components/blog/blog.component';
+import { Iarticulo } from './interfaces/iarticulo.interface';
 
 @Component({
   selector: 'app-root',
@@ -10,5 +11,10 @@ import { BlogComponent } from './components/blog/blog.component';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'actividad5';
+  arrayArticulos: Iarticulo[] = [];
+
+  handlePublicacion($event: any) {
+    this.arrayArticulos.push($event);
+    console.log(this.arrayArticulos);
+  }
 }

@@ -1,19 +1,19 @@
 <div class="formulario">
     <div class="w_input">
         <label for="title">Título</label>
-        <input type="text" placeholder="Introduce el título de la noticia">
+        <input type="text" placeholder="Introduce el título de la noticia" [(ngModel)]="newArticulo.title">
     </div>
     <div class="w_input">
         <label for="image">Imagen</label>
-        <input type="url" placeholder="Introduce la URL de la imagen">
+        <input type="url" placeholder="Introduce la URL de la imagen" [(ngModel)]="newArticulo.image">
     </div>
     <div class="cuerpo w_input">
         <label for="text">Texto</label>
-        <textarea id="text" placeholder="Introduce el texto de la noticia"></textarea>
+        <textarea id="text" placeholder="Introduce el texto de la noticia" [(ngModel)]="newArticulo.content"></textarea>
     </div>
     <div class="w_input">
         <label for="date">Fecha de publicación</label>
-        <input type="date" id="fecha">
+        <input type="date" id="fecha" [(ngModel)]="newArticulo.date">
     </div>
     <button (click)="publicar()">Publicar noticia</button>
 
