@@ -12,8 +12,13 @@ import { FormsModule } from '@angular/forms';
 export class FormularioComponent {
   newArticulo: Iarticulo = { title: "", image: "", content: "", date: ""};
   @Output() publicaArticulo = new EventEmitter();
+
   publicar(){
-    this.publicaArticulo.emit(this.newArticulo);
-    this.newArticulo = { title: "", image: "", content: "", date: ""};
+    if (this.newArticulo.title !=="" && this.newArticulo.image !== "" && this.newArticulo.content !== "" && this.newArticulo.date !== ""){
+      this.publicaArticulo.emit(this.newArticulo);
+      this.newArticulo = { title: "", image: "", content: "", date: ""};
+    }else{
+      alert ("Todos los campos son obligatorios");
+    }
   }
 }
