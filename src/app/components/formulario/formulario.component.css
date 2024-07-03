@@ -29,8 +29,10 @@ button {
 
 .formulario {
   padding: 20px 30px;
-  background-color: lightgrey;
+  background-color: rgb(213, 208, 208);
   border: 2px black solid;
+  position: sticky;
+  top: 28px;
 }
 
 .cuerpo label {

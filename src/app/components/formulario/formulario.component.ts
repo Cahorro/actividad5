@@ -15,10 +15,26 @@ export class FormularioComponent {
 
   publicar(){
     if (this.newArticulo.title !=="" && this.newArticulo.image !== "" && this.newArticulo.content !== "" && this.newArticulo.date !== ""){
+      this.newArticulo.date = this.newArticulo.date.split("-").reverse().join("/");
       this.publicaArticulo.emit(this.newArticulo);
       this.newArticulo = { title: "", image: "", content: "", date: ""};
     }else{
       alert ("Todos los campos son obligatorios");
+    }
+  }
+
+  isValidUrl(urlString: string) {
+    try {
+      return Boolean(new URL(urlString));
+    }
+    catch(e){
+      return false;
+    }
+  }
+
+  onChangeURL(){
+    if (!this.isValidUrl(this.newArticulo.image)){
+      alert("Formato de URL de imagen inválido");
     }
   }
 }

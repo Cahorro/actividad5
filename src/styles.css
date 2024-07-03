@@ -1,18 +1,23 @@
+* {
+  box-sizing: border-box;
+}
 .articulo {
   padding: 20px 30px;
-  background-color: lightsteelblue;
+  background-color: rgb(209, 215, 223);
   padding: 10px;
   border: 1px solid black;
-  margin: 10px;
+  margin: 0px 10px 20px 10px;
   overflow: hidden;
-  box-sizing: content-box;
 }
 
 .tituloArticulo {
   text-transform: uppercase;
+  color: blue;
+  display: inline;
 }
 
 .fecha {
+  display: block;
   margin-top: 0px;
 }
 .imagen {
@@ -20,4 +25,8 @@
   width: 200px;
   margin: 10px;
   object-fit: cover;
+}
+
+.contenido {
+  text-align: justify;
 }

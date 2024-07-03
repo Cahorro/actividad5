@@ -5,7 +5,8 @@
     </div>
     <div class="w_input">
         <label for="image">Imagen</label>
-        <input type="url" placeholder="Introduce la URL de la imagen" [(ngModel)]="newArticulo.image">
+        <input type="url" placeholder="Introduce la URL de la imagen" [(ngModel)]="newArticulo.image"
+            (change)="onChangeURL()">
     </div>
     <div class="cuerpo w_input">
         <label for="text">Texto</label>
